@@ -8,6 +8,8 @@ function setup() {
   classifier = ml5.imageClassifier('MobileNet', modelLoaded);
 }
 function draw() {
+  translate(width,0);
+  scale(-1, 1);
   image(video, 0, 0, 600, 500);
   classifier.classify(video, getResults);
 }
